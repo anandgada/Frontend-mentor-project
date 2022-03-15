@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=League+Spartan&family=Titillium+Web:wght@700&display=swap');
+
+ body{
+    /* font-family:'Karla', sans-serif;; */
+    font-size: 16px;
+} 
+.logo{
+    height: 20px;
+    width: 100px;
+}
+.container button{
+    border: 5px !important;
+    border-color: black !important;
+
+}
+
+
+.container{
+    background-color: white;
+    z-index: 2;
+    top:-20px;
+    height:60px;
+    z-index:1;
+}
+
+.color-gray:hover {
+    color: hsl(256, 26%, 20%);
+}
+
+.color-gray {
+    color: hsl(273, 4%, 51%);
+}
+
+.plan {
+    color:  hsl(270, 9%, 17%);
+    border: 1px solid  hsl(270, 9%, 17%) !important;
+    padding: 4px 35px;
+    
+}
+.imgage img{
+    width: 100px !important;
+    height: 18px !important;
+}
+.cont1{
+    height:550px;
+    width: 100vw;
+    background-color: hsl(256, 26%, 20%);   
+    padding-top: 50px;
+}
+hr{
+    width: 125px;
+}
+.Hpar{
+    font-size:50px !important;
+    color:  hsl(0, 0%, 98%);
+    font-family: 'DM Serif Display', serif;
+}
+.subtext p{
+    color:  hsl(0, 0%, 98%);
+}
+.plan1{
+    color: hsl(0, 0%, 98%);
+    border: 1px solid hsl(0, 0%, 98%)!important;
+    padding: 4px 35px;
+    width: 145px;
+}
+.PeopleImage img{
+    position: absolute;
+    right: 160px;
+    height: 550px;
+    width: 500px;
+    top: 80px;
+    padding-right: 10px;
+}
+.rightlineImage{
+    position:absolute;
+    top: -70px;
+    right: 0px;
+    z-index: 0;
+    
+}
+
+.rightlineImage > img {
+    width: 450px;
+    height: 500px;
+}
+
+.header {
+    inset: 0;
+    position: sticky;
+    z-index: 100;
+    background-color: white;
+    padding: 20px 20px;
+    width: 100vw;
+}
+.leftlineImage img{
+    position: sticky;
+    margin-top: -200px;
+    /* z-index: 1000; */
+}
+.heading2{
+    font-family: 'DM Serif Display', serif;
+    font-size:70px !important;
+}
+.subHeading{
+    padding: 15px;
+    font-size: 25px;
+    font-family: 'DM Serif Display', serif;
+}
+.subheadingText{
+    color: hsl(273, 4%, 51%);   
+}
+.UpperfooterBox{
+    height: 250px;
+    background-color: hsl(256, 26%, 20%); 
+    background-image:url(./images/bg-pattern-how-we-work-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top right;  
+}
+.UpperFooterHeading{
+    font-size:50px !important;
+    color:  hsl(0, 0%, 98%);
+    font-family: 'DM Serif Display', serif;
+    line-height: 1;
+
+}
+.span2{
+    color: hsl(0, 0%, 98%);
+    width: 180px;
+    padding: 2px;
+    height: 40px;
+    text-align: center;
+    margin-top: 26px;
+
+}
+.footer{
+    height: 400px;
+    width: 100%;
+    background-color: hsl(0, 0%, 98%);
+    background-image: url(./images/bg-pattern-footer-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+.footerline  hr{
+    border-color:  hsl(256, 26%, 20%, .10);
+    width: 100%;
+    border-style: solid;
+
+}
+.footerHeading p{
+    color: hsl(273, 4%, 51%);
+}
+.footsubtext{
+    font-weight: 400;
+    line-height:2 ;
+}
