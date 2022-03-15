@@ -4,65 +4,70 @@
     /* font-family:'Karla', sans-serif;; */
     font-size: 16px;
 } 
+
+.NavBar {
+    inset: 0;
+    position: sticky;
+    z-index: 100;
+    background-color: white;
+    padding: 20px 20px;
+    width: 100vw;
+}
+
 .logo{
     height: 20px;
     width: 100px;
 }
-.container button{
-    border: 5px !important;
-    border-color: black !important;
 
-}
-
-
-.container{
-    background-color: white;
-    z-index: 2;
-    top:-20px;
-    height:60px;
-    z-index:1;
-}
-
-.color-gray:hover {
-    color: hsl(256, 26%, 20%);
-}
-
-.color-gray {
+.NavbarItems{
     color: hsl(273, 4%, 51%);
 }
 
-.plan {
+.NavbarItems:hover{
+    color:hsl(270, 9%, 17%);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.Viewplan_Button {
     color:  hsl(270, 9%, 17%);
     border: 1px solid  hsl(270, 9%, 17%) !important;
     padding: 4px 35px;
-    
 }
-.imgage img{
-    width: 100px !important;
-    height: 18px !important;
+
+.Viewplan_Button:hover {
+    color: hsl(0, 0%, 98%);
+    background-color:hsl(256, 26%, 20%);
+    cursor: pointer;
 }
-.cont1{
+
+.MainBlock{
     height:550px;
     width: 100vw;
     background-color: hsl(256, 26%, 20%);   
     padding-top: 50px;
 }
-hr{
+.ShortLine hr{
     width: 125px;
 }
-.Hpar{
+.MainBlockTitle{
     font-size:50px !important;
     color:  hsl(0, 0%, 98%);
     font-family: 'DM Serif Display', serif;
 }
-.subtext p{
+.MainBlock_Subtext p{
     color:  hsl(0, 0%, 98%);
 }
-.plan1{
+.MainBlock_ViewPlanButton{
     color: hsl(0, 0%, 98%);
     border: 1px solid hsl(0, 0%, 98%)!important;
     padding: 4px 35px;
     width: 145px;
+}
+.MainBlock_ViewPlanButton:hover{
+    background-color:hsl(0, 0%, 98%);
+    cursor: pointer;
+    color: black;
 }
 .PeopleImage img{
     position: absolute;
@@ -79,35 +84,29 @@ hr{
     z-index: 0;
     
 }
-
-.rightlineImage > img {
+.rightlineImage img {
     width: 450px;
     height: 500px;
-}
-
-.header {
-    inset: 0;
-    position: sticky;
-    z-index: 100;
-    background-color: white;
-    padding: 20px 20px;
-    width: 100vw;
 }
 .leftlineImage img{
     position: sticky;
     margin-top: -200px;
     /* z-index: 1000; */
 }
-.heading2{
+.SubMainBlockTitle{
     font-family: 'DM Serif Display', serif;
     font-size:70px !important;
 }
-.subHeading{
-    padding: 15px;
+.SubMainBlock hr{
+    width: 125px;
+}
+.SubMainBlock_SubTitle{
     font-size: 25px;
+    padding-top: 30px;
+    padding-bottom: 10px;
     font-family: 'DM Serif Display', serif;
 }
-.subheadingText{
+.SubMainBlock_Text{
     color: hsl(273, 4%, 51%);   
 }
 .UpperfooterBox{
@@ -124,16 +123,25 @@ hr{
     line-height: 1;
 
 }
-.span2{
+.Upperfooter_ViewPlanButton{
     color: hsl(0, 0%, 98%);
     width: 180px;
     padding: 2px;
     height: 40px;
     text-align: center;
     margin-top: 26px;
+}
+.Upperfooter_ViewPlanButton:hover{
+    background-color:hsl(0, 0%, 98%);
+    cursor: pointer;
+    color: black;
 
 }
-.footer{
+.FooterIcons:hover{
+    cursor: pointer;
+    filter: brightness(0);
+}
+.Footer{
     height: 400px;
     width: 100%;
     background-color: hsl(0, 0%, 98%);
@@ -141,16 +149,20 @@ hr{
     background-repeat: no-repeat;
     background-position: top left;
 }
-.footerline  hr{
+.Footerline hr{
     border-color:  hsl(256, 26%, 20%, .10);
     width: 100%;
     border-style: solid;
 
 }
-.footerHeading p{
+.FooterTitle p{
     color: hsl(273, 4%, 51%);
 }
-.footsubtext{
-    font-weight: 400;
+.FooterText{
+    font-weight: 450;
     line-height:2 ;
+}
+.FooterText p:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
