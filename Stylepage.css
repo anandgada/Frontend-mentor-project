@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=League+Spartan&family=Titillium+Web:wght@700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
  body{
     /* font-family:'Karla', sans-serif;; */
     font-size: 16px;
+    width: 100vw;
 } 
 
 .NavBar {
@@ -11,9 +15,8 @@
     z-index: 100;
     background-color: white;
     padding: 20px 20px;
-    width: 100vw;
+    /* width: 100vw; */
 }
-
 .logo{
     height: 20px;
     width: 100px;
@@ -21,6 +24,17 @@
 
 .NavbarItems{
     color: hsl(273, 4%, 51%);
+
+}
+
+.NavbarItems[is-mobile] {
+    color: white;
+    font-size:large;
+     
+}
+.NavbarItems:hover[is-mobile]{
+    color: aliceblue;
+    cursor: pointer;
 }
 
 .NavbarItems:hover{
@@ -33,6 +47,15 @@
     color:  hsl(270, 9%, 17%);
     border: 1px solid  hsl(270, 9%, 17%) !important;
     padding: 4px 35px;
+}
+
+.Viewplan_Button[is-mobile]{
+    color: white !important;
+    border: 1px solid white !important;
+    /* height: 40px !important; */
+    /* width:80%; */
+    padding: 5px 100px !important;
+    /* margin-left: 140px */
 }
 
 .Viewplan_Button:hover {
@@ -115,13 +138,11 @@
 }
 .UpperfooterBox{
     height: 100%;
-    width: 90%;
     background-color: hsl(256, 26%, 20%); 
     background-image:url(./images/bg-pattern-how-we-work-mobile.svg);
     background-repeat: no-repeat;
     background-position: top right; 
-    margin-left: auto; 
-    margin-right: auto;
+
 }
 .UpperFooterHeading{
     font-size:40px !important;
@@ -144,6 +165,18 @@
     color: black;
 
 }
+
+#mobilemenu {
+    align-items:center;
+    height: 500px;
+    background-color: hsl(270, 9%, 17%);
+    background-image: url(./images/bg-pattern-mobile-nav.svg);
+    background-position:bottom right;
+    background-repeat: no-repeat;
+
+    
+}
+
 .FooterIcons:hover{
     cursor: pointer;
     filter: brightness(0);
@@ -174,12 +207,13 @@
     text-decoration: underline;
     cursor: pointer;
 }
-.open {
+.open{
     display: flex !important;
+    
 }
-
 .close {
     display: none;
+    
 }
 .mb_container{
     width: 100%;
@@ -191,10 +225,9 @@
 }
 .right_mobile_lines{
     position: absolute;
-    right: 0%;
-
-    
+    right: 0%;  
 }
+
 @media (min-width: 768px) {
     .UpperfooterBox {
         background-image: url("./images/bg-pattern-how-we-work-desktop.svg");
@@ -206,5 +239,21 @@
         background-repeat: no-repeat;
         background-position: top left;
     }
+
+    .open {
+        display: none !important;
+    }
 }
-    
+
+@media (max-width: 768px){
+    .NavBar {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    .NavBar[is-open="true"] {
+        padding-bottom: 0;
+    }
+}

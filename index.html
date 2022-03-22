@@ -5,54 +5,59 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
         <title>Frontend Mentor</title>
-        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="Stylepage.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="./tailwind.css" >
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+        <!-- <link rel="stylesheet" href="Stylepage.css"> -->
         <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap" rel="stylesheet">
+      
 
         <script>
           function openmenu() {
             var menu = document.getElementById("mobilemenu")
             if(menu.classList.contains("open")){
               menu.classList.remove("open")
+              document.getElementById("open").removeAttribute("style")
+              document.getElementById("close").style.display = "none"
+              document.getElementById("navbar").setAttribute("is-open","false")
             }else{
               menu.classList.add("open")
-              
-              
+              document.getElementById("open").style.display = "none"
+              document.getElementById("close").removeAttribute("style")
+              document.getElementById("navbar").setAttribute("is-open", "true")
             }
           }
         </script>
   </head>
   <body>
-      <div class="NavBar">
-          <div class="md:px-32 px-12">
-              <div class="flex flex-row justify-content-between items-end">
+      <div class="NavBar" id="navbar">
+          <div class="md:px-32 px-0">
+              <div class="flex flex-row justify-content-between px-8 items-end md:mb-2">
                   <div class="logo">
                     <img src="./images/logo.svg" />
                   </div>
-                  <div class="ml-auto hidden md:flex flex-row space-x-6 ml-auto" id="desktopmenu">
+                  <div class="ml-auto hidden md:flex flex-row space-x-6" id="desktopmenu">
                     <span class=" NavbarItems">How we work</span>
                     <span class=" NavbarItems">Blog</span>
                     <span class=" NavbarItems">Account</span>
                     <span class="Viewplan_Button">View Plan</span>
                   </div>
-                  <div onclick="openmenu();" class="md:hidden flex ml-auto cursor-pointer	select-none	">
-                    Open
+                  <div onclick="openmenu();" class="md:hidden flex ml-auto cursor-pointer	select-none px-1 py-0.5 border-black border-2	">
+                    
+                    <i id="open" class="material-icons">menu</i>
+                    <i id="close" style="display: none;" class="material-icons">close</i>
+                    
                   </div>
                 </div>
-                <div class="flex-col mt-10 close items-center" style="background-color: hsl(256, 26%, 20%);" id="mobilemenu">
-                  <span class=" NavbarItems mb-5">How we work</span>
-                  <span class=" NavbarItems mb-5">Blog</span>
-                  <span class=" NavbarItems mb-5">Account</span>
-                  <span class="Viewplan_Button mb-5 w-max">View Plan</span>
+                <div class="flex-col mt-5 close pt-14" id="mobilemenu">
+                  
+                  <span is-mobile class="NavbarItems mb-5">HOW WE WORK</span>
+                  <span is-mobile class="NavbarItems mb-5">BLOG</span>
+                  <span is-mobile class="NavbarItems mb-5">ACCOUNT</span>
+                  <span is-mobile class="Viewplan_Button mb-5">VIEW PLAN</span>
                 </div>
               </div>
         
@@ -112,7 +117,7 @@
           <div class="SubMainBlockTitle mt-8 md:text-left text-center">
               <h1>We're different</h1>
          </div>
-          <div class="flex md:px-0 px-20 md:flex-row flex-col justify-between items-center mt-12 space-x-4">
+          <div class="flex md:px-0 px-6 md:flex-row flex-col justify-between items-center mt-12 space-x-4">
               <div class="snappylogo md:mb-0 mb-12 md:text-left text-center md:items-start items-center  flex flex-col">
                   <div> 
                        <img src="./images/icon-snappy-process.svg" alt="logo1">
@@ -150,8 +155,8 @@
                 </div>
             </div>
           </div>
-          <div class="UpperfooterBox items-center mt-36 flex px-2 md:px-32 py-16 text-center md:py-16 h-auto md:h-max md:flex-row flex-col justify-between">
-            <div class="UpperFooterHeading">
+          <div class="UpperfooterBox items-center mt-36 flex px-6 md:px-20 py-20 md:w-auto w-80 mr-auto ml-auto md:py-16 h-auto md:h-max md:flex-row flex-col justify-between">
+            <div class="UpperFooterHeading md:text-start text-center">
               <h2>Find out more</h2>
               <h2>about how we work</h2>
             </div >
